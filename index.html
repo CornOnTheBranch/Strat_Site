@@ -15,7 +15,8 @@
         <!-- HEADER -->
         <header>
             <div class="header">
-                <h1>Welcome to COTB</h1>
+                <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo">
+                <h1>COTB</h1>
             </div>
         </header>
         <!-- MAIN CONTENT -->
@@ -46,18 +47,39 @@
             margin: 0;
             padding: 0;
         }
+
         .header {
-            background-color: #333;
+            background-image: url('path/to/background-image.jpg'); /* Replace with your background image path */
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 20px;
             text-align: center;
+            position: relative;
         }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            display: inline;
+        }
+
         .main {
             margin: 20px;
             padding: 20px;
             background-color: white;
             border-radius: 5px;
         }
+
         .features {
             display: flex;
             flex-wrap: wrap;
@@ -65,6 +87,7 @@
             margin: 20px;
             padding: 20px;
         }
+
         .feature {
             flex: 1;
             min-width: 200px;
@@ -73,6 +96,7 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
+
         footer {
             background-color: #333;
             color: white;
