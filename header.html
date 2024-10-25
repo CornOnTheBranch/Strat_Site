@@ -1,33 +1,78 @@
 <!-- header.html -->
-<div class="header" style="background-image: url('Images/COTB01_Peak.jpg');">
-    <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo" style="width: 40px; height: auto; border-radius: 10px; opacity: 0.8;">
-    <h1 style="margin-top: 20px; font-size: 2.5rem;">COTB</h1>
+<div class="header">
+    <div class="header-content">
+        <h1 class="header-title">COTB</h1>
+        <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo">
+    </div>
+    <div class="button-band">
+        <div class="button-placeholder">Link 1</div>
+        <div class="button-placeholder">Link 2</div>
+        <div class="button-placeholder">Link 3</div>
+    </div>
 </div>
 
 <style>
     body, html {
         margin: 0;
         padding: 0;
-        height: 10%; /* Ensures full height for the body and html */
+        height: 100%;
     }
 
+    /* Header styling */
     .header {
-        width: 50vw; /* Set header width to 50% of the viewport width */
-        height: 50vh; /* Set header height to 50% of the viewport height */
-        background-size: cover; /* Ensures the image covers the entire header area */
-        background-position: center; /* Centers the background image */
-        overflow: hidden; /* Prevents overflow */
-        margin: 0 auto; /* Centers the header horizontally */
-        border-bottom-left-radius: 30px; /* Lower left curved corner */
-        border-bottom-right-radius: 30px; /* Lower right curved corner */
+        width: 1920px; /* Full width */
+        height: 100px; /* Header height */
+        background-color: #f0f0f0; /* Adjust color as needed */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
     }
 
-    /* Optional responsive adjustment */
-    @media (max-width: 768px) {
-        .header {
-            width: 80vw; /* Adjusts to 80% width on smaller screens */
-            height: 40vh; /* Adjusts to 40% height on smaller screens */
-        }
+    /* Centered content */
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-title {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .logo {
+        width: 40px;
+        height: auto;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+
+    /* Bottom band styling */
+    .button-band {
+        width: 100%;
+        height: 40px;
+        background-color: #333; /* Adjust to match footer color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+    }
+
+    /* Button placeholder styling */
+    .button-placeholder {
+        background-color: #555;
+        color: white;
+        width: 80px;
+        height: 25px;
+        border-radius: 8px;
+        margin: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9rem;
+        cursor: pointer;
     }
 </style>
-
