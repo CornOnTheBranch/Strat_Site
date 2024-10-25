@@ -12,19 +12,22 @@
     }
 
     .header {
-        height: 200vh; /* Full viewport height */
-        max-width: 328px; /* Adjust this value to limit the width of the header */
-        margin: 0 auto; /* Centers the header horizontally */
-        background-size: cover; /* Covers the entire area */
-        background-position: center; /* Centers the image */
+        width: 50vw; /* Set header width to 50% of the viewport width */
+        height: 50vh; /* Set header height to 50% of the viewport height */
+        background-size: cover; /* Ensures the image covers the entire header area */
+        background-position: center; /* Centers the background image */
         overflow: hidden; /* Prevents overflow */
+        margin: 0 auto; /* Centers the header horizontally */
+        border-bottom-left-radius: 30px; /* Lower left curved corner */
+        border-bottom-right-radius: 30px; /* Lower right curved corner */
     }
 
-    /* Additional styles for responsive design */
+    /* Optional responsive adjustment */
     @media (max-width: 768px) {
         .header {
-            height: auto; /* Adjusts height on smaller screens */
-            width: 100%; /* Ensures full width on small screens */
+            width: 80vw; /* Adjusts to 80% width on smaller screens */
+            height: 40vh; /* Adjusts to 40% height on smaller screens */
         }
     }
 </style>
+
