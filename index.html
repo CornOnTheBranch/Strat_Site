@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COTB</title>
-    <meta name="description" content="COTB Site in progress!">
+    <meta name="description" content="A sample website for COTB">
     <meta http-equiv="author" content="COTB">
-    <meta name="keywords" content="COTB">
+    <meta name="keywords" content="COTB, web design, sample, practice">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -126,20 +126,22 @@
         .features {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            justify-content: space-between; /* Add spacing between feature boxes */
+            gap: 20px; /* Adds space between items */
             margin: 20px;
             padding: 20px;
         }
 
         .feature {
-            flex: 1 1 calc(33% - 20px); /* Responsive layout for three boxes */
-            min-width: 250px; /* Ensures the box does not get too small */
+            flex: 1 1 calc(33.333% - 20px); /* Ensure 3 boxes in a row with spacing */
+            min-width: 250px; /* Minimum width to prevent overlap */
             background-color: #ffffff;
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             text-align: center;
-            height: 250px; /* Standard height for all feature boxes */
+            height: auto; /* Dynamic height based on content */
+            margin-bottom: 20px; /* Space between rows of features */
         }
 
         .placeholder {
