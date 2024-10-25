@@ -20,7 +20,7 @@
 
     /* Header styling */
     .header {
-        width: 1920px; /* Full width on larger screens */
+        width: 1080px; /* Limit width on larger screens */
         height: 100px; /* Header height */
         background-color: #f0f0f0; /* Light background color */
         display: flex;
@@ -28,6 +28,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
+        margin: 0 auto; /* Center the header horizontally */
     }
 
     /* Centered content */
@@ -79,8 +80,7 @@
     /* Responsive styling for smaller screens */
     @media (max-width: 600px) {
         .header {
-            width: 100%; /* Set header to full screen width on small devices */
-            max-width: 480px; /* Limit the width if needed */
+            width: 80%; /* Set header to 80% of the screen width on smaller devices */
         }
     }
 </style>
