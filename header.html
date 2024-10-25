@@ -22,7 +22,6 @@
     .header {
         max-width: 1080px; /* Limit width on larger screens */
         width: 100%; /* Allow full width within container */
-        height: 50px; /* Increased height for better spacing */
         background-color: #f0f0f0; /* Light background color */
         display: flex;
         flex-direction: column;
@@ -50,6 +49,7 @@
         height: 100px;
         border-radius: 10px;
         opacity: 0.8;
+        margin-bottom: 15px; /* Add space between the logo and button band */
     }
 
     /* Bottom band styling */
@@ -81,7 +81,6 @@
     @media (max-width: 600px) {
         .header {
             width: 80%; /* Set header to 80% of the screen width on smaller devices */
-            height: auto; /* Allow header to adjust height automatically */
         }
     }
 </style>
