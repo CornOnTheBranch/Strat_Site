@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>COTB</title>
+    <meta name="description" content="High Altitude Balloon - COTB">
+    <meta http-equiv="author" content="COTB">
+    <meta name="keywords" content="COTB">
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function loadHTML(elementId, filePath) {
+            fetch(filePath)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+    </script>
+</head>
+
+<body onload="loadHTML('header', 'header.html'); loadHTML('footer', 'footer.html');">
+    <div class="container">
+        <!-- HEADER -->
+        <header id="header"></header>
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+            <!-- Additional content can be added here -->
+        </main>
+
+        <!-- FOOTER -->
+        <footer id="footer" class="footer-container"></footer>
+    </div>
+
+    <!-- Inline styling for layout -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-container {
+            max-width: 1080px; /* Restrict footer width to 1080px */
+            width: 100%; /* Allow full width within container */
+            margin: 0 auto; /* Center align the footer */
+            text-align: center;
+            padding: 20px 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</body>
+</html>
