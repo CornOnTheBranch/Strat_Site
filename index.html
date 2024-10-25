@@ -8,38 +8,52 @@
     <meta http-equiv="author" content="COTB">
     <meta name="keywords" content="COTB, web design, sample, practice">
     <link rel="stylesheet" href="style.css">
-    <script src="https://example.com/external-script.js"></script> <!-- Updated to an external valid URL -->
+    <script src="https://example.com/external-script.js"></script>
 </head>
 <body>
     <div class="container">
         <!-- HEADER -->
         <header>
-            <div class="header">
+            <div class="header" style="background-image: url('Images/COTB01_Peak.jpg'); opacity: 0.5;">
                 <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo">
                 <h1>COTB</h1>
             </div>
         </header>
+
         <!-- MAIN CONTENT -->
         <main class="main">
-            <h2>This is just an example with some web content. This is the Hero Unit.</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/do2z4YF2p2c?si=247QE-ZVbFgurXa0" frameborder="0" allowfullscreen></iframe>
         </main>
+
         <!-- FEATURED CONTENT SECTION -->
         <section class="features">
             <div class="feature">
-                <h3>Featured Content 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa eget justo hendrerit vehicula.</p>
+                <a href="cotb01_flight_2022.html">
+                    <img src="Images/COTB02_Peak.jpg" alt="COTB01 Flight, 2022" style="width:100%; border-radius: 5px;">
+                </a>
+                <h3>COTB01 Flight, 2022</h3>
             </div>
             <div class="feature">
-                <h3>Featured Content 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non risus a risus faucibus tincidunt.</p>
+                <a href="cotb02_flight_2024.html">
+                    <img src="Images/COTB01_Peak_metrics.jpg" alt="COTB02 Flight, 2024" style="width:100%; border-radius: 5px;">
+                </a>
+                <h3>COTB02 Flight, 2024</h3>
             </div>
         </section>
+
         <!-- FOOTER -->
         <footer>
-            &copy; 2024 COTB, All Rights Reserved.
+            &copy; 2024 COTB, All Rights Reserved.<br>
+            COTB Science, PO Box 259, Morecambe, LA4 9ED<br>
+            <div class="social-icons">
+                <a href="https://www.patreon.com/c/COTB000" target="_blank"><img src="Images/Patreon_logo.png" alt="Patreon" class="icon"></a>
+                <a href="https://youtu.be/PDOmuuX6oBQ?si=GJSyy66zqy7MZLyG" target="_blank"><img src="Images/YouTube_logo.png" alt="YouTube" class="icon"></a>
+                <a href="https://ko-fi.com/c_o_t_b" target="_blank"><img src="Images/KoFi_logo.png" alt="Ko-fi" class="icon"></a>
+            </div>
         </footer>
     </div>
-    <!-- Inline styling for better presentation (remove if external style.css is defined) -->
+
+    <!-- Inline styling -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -49,7 +63,6 @@
         }
 
         .header {
-            background-image: url('path/to/background-image.jpg'); /* Replace with your background image path */
             background-size: cover;
             background-position: center;
             padding: 40px;
@@ -59,6 +72,7 @@
             color: white;
             text-align: center;
             position: relative;
+            opacity: 0.5;
         }
 
         .logo {
@@ -78,6 +92,7 @@
             padding: 20px;
             background-color: white;
             border-radius: 5px;
+            text-align: center;
         }
 
         .features {
@@ -95,6 +110,7 @@
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
         }
 
         footer {
@@ -105,6 +121,18 @@
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .icon {
+            width: 30px;
+            height: auto;
         }
     </style>
 </body>
