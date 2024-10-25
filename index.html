@@ -32,12 +32,13 @@
         <header id="header"></header>
 
         <!-- MAIN CONTENT -->
-        <main class="main">
-            <div class="video-container">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/do2z4YF2p2c?si=247QE-ZVbFgurXa0" frameborder="0" allowfullscreen></iframe>
-                <h2 style="text-align: center;">COTB Project Intro</h2>
-            </div>
-        </main>
+      <main class="main">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/do2z4YF2p2c?si=247QE-ZVbFgurXa0" frameborder="0" allowfullscreen></iframe>
+            <h2 style="text-align: center;">COTB Project Intro</h2>
+        </div>
+    </main>
+
 
         <!-- FEATURED CONTENT SECTION -->
         <section class="features">
@@ -98,12 +99,20 @@
         }
 
         .video-container {
-            max-width: 1080px; /* Limit width to 1080px */
-            aspect-ratio: 16 / 9; /* Maintain aspect ratio */
-            overflow: hidden;
-            margin: 0 auto; /* Center the container */
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 25%; /* Set the width to 25% */
+            height: calc(25% * 9 / 16); /* Maintain aspect ratio (16:9) */
+            max-width: 480px; /* Optional: Set a maximum width */
+            max-height: 270px; /* Optional: Set a maximum height */
+            margin-left: auto; /* Align to the right */
+            margin-right: 0; /* No margin on the right */
+        text-align: center; /* Center align text inside the container */
         }
+
+        .video-container iframe {
+            width: 100%; /* Make the iframe take full width of the container */
+            height: 100%; /* Make the iframe take full height of the container */
+        }
+
 
         .features {
             display: flex;
