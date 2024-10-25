@@ -114,11 +114,11 @@
         }
 
         .video-container {
-            max-width: 100%; 
+            max-width: 800px; /* Set a maximum width for the video */
             height: auto; /* Allow height to adjust based on content */
             aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
             overflow: hidden;
-            margin: 0 auto;
+            margin: 0 auto; /* Center the video container */
             padding: 0; /* Remove padding for a cleaner fit */
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
@@ -135,6 +135,7 @@
         .feature {
             flex: 1 1 calc(33.333% - 20px); /* Ensure 3 boxes in a row with spacing */
             min-width: 250px; /* Minimum width to prevent overlap */
+            max-width: 300px; /* Limit max width to keep it consistent */
             background-color: #ffffff;
             border-radius: 5px;
             padding: 20px;
@@ -181,6 +182,9 @@
             .feature {
                 flex: 1 1 100%; /* Full width on mobile */
                 height: auto; /* Let the height be dynamic */
+            }
+            .video-container {
+                max-width: 100%; /* Full width on mobile */
             }
         }
     </style>
