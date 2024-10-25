@@ -5,9 +5,9 @@
         <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo">
     </div>
     <div class="button-band">
-        <div class="button-placeholder">Home</div>
-        <div class="button-placeholder">Science</div>
-        <div class="button-placeholder">Supplies</div>
+        <a href="index.html" class="button-placeholder">Home</a> <!-- Updated link to index.html -->
+        <a href="science.html" class="button-placeholder">Science</a>
+        <a href="supplies.html" class="button-placeholder">Supplies</a>
     </div>
 </div>
 
@@ -74,7 +74,12 @@
         justify-content: center;
         align-items: center;
         font-size: 0.9rem;
-        cursor: pointer;
+        text-decoration: none; /* Remove underline */
+        transition: background-color 0.3s; /* Add transition for hover effect */
+    }
+
+    .button-placeholder:hover {
+        background-color: #777; /* Change background color on hover */
     }
 
     /* Responsive styling for smaller screens */
