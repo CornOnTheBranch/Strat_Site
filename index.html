@@ -13,36 +13,36 @@
     <div class="container">
         <!-- HEADER -->
         <header>
-            <div class="header" style="background-image: url('Images/COTB01_Peak.jpg'); opacity: 0.8;">
-                <h1 style="font-size: 2.5rem;">COTB</h1>
-                <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo" style="border-radius: 10px; opacity: 0.8;">
+            <div class="header" style="background-image: url('Images/COTB01_Peak.jpg'); opacity: 0.9;">
+                <h1 style="margin-top: 100px; font-size: 2.5rem;">COTB</h1>
+                <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo" style="width: 40px; height: auto; margin-top: 50px; border-radius: 10px; opacity: 0.8;">
             </div>
         </header>
 
         <!-- MAIN CONTENT -->
         <main class="main">
             <div class="video-container">
-                <iframe width="100%" height="506px" src="https://www.youtube.com/embed/do2z4YF2p2c?si=247QE-ZVbFgurXa0" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/do2z4YF2p2c?si=247QE-ZVbFgurXa0" frameborder="0" allowfullscreen></iframe>
                 <h2 style="text-align: center;">COTB Project Intro</h2>
             </div>
         </main>
 
         <!-- FEATURED CONTENT SECTION -->
         <section class="features">
-            <!-- COTB02 Flight, 2024 -->
-            <div class="feature">
-                <a href="cotb02_flight_2024.html">
-                    <img src="Images/COTB01_Peak_metrics.jpg" alt="COTB02 Flight, 2024" style="width:100%; border-radius: 5px;">
-                </a>
-                <h3>COTB02 Flight, 2024</h3>
-            </div>
-
             <!-- COTB01 Flight, 2022 -->
             <div class="feature">
                 <a href="cotb01_flight_2022.html">
-                    <img src="Images/COTB02_Peak.jpg" alt="COTB01 Flight, 2022" style="width:100%; border-radius: 5px;">
+                    <img src="Images/COTB01_Peak_metrics.jpg" alt="COTB01 Flight, 2022" style="width:100%; border-radius: 5px;">
                 </a>
                 <h3>COTB01 Flight, 2022</h3>
+            </div>
+
+            <!-- COTB02 Flight, 2024 -->
+            <div class="feature">
+                <a href="cotb02_flight_2024.html">
+                    <img src="Images/COTB02_Peak.jpg" alt="COTB02 Flight, 2024" style="width:100%; border-radius: 5px;">
+                </a>
+                <h3>COTB02 Flight, 2024</h3>
             </div>
 
             <!-- COTB03 Flight, 2024 (Placeholder with Question Mark) -->
@@ -67,7 +67,7 @@
     <p>COTB Science, PO Box 259, Morecambe, LA4 9ED</p>
     <p>&copy; 2024 COTB, All Rights Reserved.</p>
 </footer>
-    </div>
+
 
     <!-- Inline styling for layout -->
     <style>
@@ -92,10 +92,15 @@
             opacity: 0.9;
         }
 
+        .header h1 {
+            margin-top: 100px;
+            font-size: 2.5rem;
+        }
+
         .logo {
-            width: 80px;
+            width: 40px;
             height: auto;
-            margin-top: 10px;
+            margin-top: 50px;
             border-radius: 10px;
             opacity: 0.8;
         }
@@ -109,11 +114,13 @@
         }
 
         .video-container {
-            max-width: 900px;
-            height: auto;
+            max-width: 100%; 
+            height: 250px; /* Set to match other box heights */
             aspect-ratio: 16 / 9;
+            overflow: hidden;
             margin: 0 auto;
             padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
         .features {
@@ -132,6 +139,7 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             text-align: center;
+            height: 250px; /* Standard height for all feature boxes */
         }
 
         .placeholder {
