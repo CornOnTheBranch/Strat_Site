@@ -14,8 +14,8 @@
         <!-- HEADER -->
         <header>
             <div class="header" style="background-image: url('Images/COTB01_Peak.jpg'); opacity: 0.9;">
-                <h1 style="margin-top: 100px; font-size: 2.5rem;">COTB</h1>
-                <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo" style="width: 40px; height: auto; margin-top: 50px; border-radius: 10px; opacity: 0.8;">
+                <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo" style="width: 40px; height: auto; border-radius: 10px; opacity: 0.8;">
+                <h1 style="margin-top: 20px; font-size: 2.5rem;">COTB</h1>
             </div>
         </header>
 
@@ -56,18 +56,19 @@
             </div>
         </section>
 
-<!-- FOOTER -->
-<footer>
-    <div class="social-icons">
-        <a href="https://www.patreon.com/c/COTB000" target="_blank"><img src="Images/Patreon_logo.png" alt="Patreon" class="icon"></a>
-        <a href="https://youtu.be/PDOmuuX6oBQ?si=GJSyy66zqy7MZLyG" target="_blank"><img src="Images/YouTube_logo.png" alt="YouTube" class="icon"></a>
-        <a href="https://ko-fi.com/c_o_t_b" target="_blank"><img src="Images/KoFi_logo.png" alt="Ko-fi" class="icon"></a>
-        <a href="https://www.facebook.com/profile.php?id=61563983050664" target="_blank"><img src="Images/FB_logo.png" alt="Facebook" class="icon"></a>
-    </div>
-    <p>COTB Science, PO Box 259, Morecambe, LA4 9ED</p>
-    <p>&copy; 2024 COTB, All Rights Reserved.</p>
-</footer>
+        <!-- FOOTER -->
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.patreon.com/c/COTB000" target="_blank"><img src="Images/Patreon_logo.png" alt="Patreon" class="icon"></a>
+                <a href="https://youtu.be/PDOmuuX6oBQ?si=GJSyy66zqy7MZLyG" target="_blank"><img src="Images/YouTube_logo.png" alt="YouTube" class="icon"></a>
+                <a href="https://ko-fi.com/c_o_t_b" target="_blank"><img src="Images/KoFi_logo.png" alt="Ko-fi" class="icon"></a>
+                <a href="https://www.facebook.com/profile.php?id=61563983050664" target="_blank"><img src="Images/FB_logo.png" alt="Facebook" class="icon"></a>
+            </div>
+            <p>COTB Science, PO Box 259, Morecambe, LA4 9ED</p>
+            <p>&copy; 2024 COTB, All Rights Reserved.</p>
+        </footer>
 
+    </div>
 
     <!-- Inline styling for layout -->
     <style>
@@ -93,14 +94,13 @@
         }
 
         .header h1 {
-            margin-top: 100px;
+            margin-top: 20px; /* Adjusted margin for spacing */
             font-size: 2.5rem;
         }
 
         .logo {
             width: 40px;
             height: auto;
-            margin-top: 50px;
             border-radius: 10px;
             opacity: 0.8;
         }
@@ -115,11 +115,11 @@
 
         .video-container {
             max-width: 100%; 
-            height: 250px; /* Set to match other box heights */
-            aspect-ratio: 16 / 9;
+            height: auto; /* Allow height to adjust based on content */
+            aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
             overflow: hidden;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0; /* Remove padding for a cleaner fit */
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
@@ -145,7 +145,7 @@
         .placeholder {
             position: relative;
             width: 100%;
-            padding-top: 56.25%;
+            padding-top: 56.25%; /* Maintain aspect ratio */
             background-color: #ddd;
             border-radius: 5px;
             text-align: center;
