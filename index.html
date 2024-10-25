@@ -98,18 +98,19 @@
             text-align: center;
         }
 
-        .video-container {           
-            max-width: 640px; /* Optional: Set a maximum width */
-            max-height: 480px; /* Optional: Set a maximum height */
-            margin-left: auto; /* Align to the right */
-            margin-right: 50; /* No margin on the right */
-        text-align: center; /* Center align text inside the container */
-        }
+.video-container {
+    max-width: 640px;  /* Control maximum width */
+    max-height: 480px; /* Control maximum height */
+    width: 50%;        /* Adjusts width of container */
+    height: auto;      /* Maintains aspect ratio */
+    text-align: right; /* Aligns container contents to the right */
+    margin-left: auto; /* Pushes container to the right */
+}
 
-        .video-container iframe {
-            width: 100%; /* Make the iframe take full width of the container */
-            height: 100%; /* Make the iframe take full height of the container */
-        }
+.video-container iframe {
+    width: 100%;  /* Make the iframe take full width of the container */
+    height: 100%; /* Make the iframe take full height of the container */
+}
 
         .features {
             display: flex;
