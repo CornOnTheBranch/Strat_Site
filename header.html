@@ -1,4 +1,3 @@
-<!-- header.html -->
 <div class="header">
     <div class="header-content">
         <h1 class="header-title">COTB</h1>
@@ -12,49 +11,22 @@
 </div>
 
 <style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-    }
-
-    /* Header styling */
     .header {
         max-width: 1080px; /* Limit width on larger screens */
         width: 100%; /* Allow full width within container */
-        height: 140px; /* Increased height for better spacing */
         background-color: #f0f0f0; /* Light background color */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between; /* Space between the header content and button band */
-        position: relative;
         margin: 0 auto; /* Center the header horizontally */
         padding: 10px 0; /* Add padding for better spacing */
-    }
-
-    /* Centered content */
-    .header-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header-title {
-        font-size: 1.5rem;
-        margin: 0;
-    }
-
-    .logo {
-        width: 40px;
-        height: auto;
-        border-radius: 10px;
-        opacity: 0.8;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
     }
 
     /* Bottom band styling */
     .button-band {
-        width: 100%;
+        width: 100%; /* Make sure the button band takes full width */
         height: 40px;
         background-color: #333; /* Adjust to match footer color */
         display: flex;
@@ -62,25 +34,10 @@
         align-items: center;
     }
 
-    /* Button placeholder styling */
-    .button-placeholder {
-        background-color: #555;
-        color: white;
-        width: 80px;
-        height: 25px;
-        border-radius: 8px;
-        margin: 0 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.9rem;
-        cursor: pointer;
-    }
-
     /* Responsive styling for smaller screens */
     @media (max-width: 600px) {
         .header {
-            width: 80%; /* Set header to 80% of the screen width on smaller devices */
+            width: 90%; /* Set header to 90% of the screen width on smaller devices */
             height: auto; /* Allow header to adjust height automatically */
         }
     }
