@@ -24,6 +24,23 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
     }
 
+    /* Centered content */
+    .header-content {
+        text-align: center; /* Center the text */
+    }
+
+    .header-title {
+        font-size: 1.5rem; /* Adjust as needed */
+        margin: 0; /* Remove default margin */
+    }
+
+    .logo {
+        width: 40px; /* Adjust size as needed */
+        height: auto;
+        border-radius: 10px;
+        opacity: 0.8; /* Adjust opacity */
+    }
+
     /* Bottom band styling */
     .button-band {
         width: 100%; /* Make sure the button band takes full width */
@@ -34,11 +51,26 @@
         align-items: center;
     }
 
+    /* Button placeholder styling */
+    .button-placeholder {
+        background-color: #555;
+        color: white;
+        width: 80px; /* Adjust as needed */
+        height: 25px; /* Adjust as needed */
+        border-radius: 8px;
+        margin: 0 10px; /* Spacing between buttons */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9rem; /* Adjust font size as needed */
+        cursor: pointer;
+    }
+
     /* Responsive styling for smaller screens */
     @media (max-width: 600px) {
         .header {
             width: 90%; /* Set header to 90% of the screen width on smaller devices */
-            height: auto; /* Allow header to adjust height automatically */
+            padding: 5px 0; /* Adjust padding */
         }
     }
 </style>
