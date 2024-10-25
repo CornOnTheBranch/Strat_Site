@@ -13,6 +13,8 @@
 
     .header {
         height: 200vh; /* Full viewport height */
+        max-width: 1200px; /* Adjust this value to limit the width of the header */
+        margin: 0 auto; /* Centers the header horizontally */
         background-size: cover; /* Covers the entire area */
         background-position: center; /* Centers the image */
         overflow: hidden; /* Prevents overflow */
@@ -22,6 +24,7 @@
     @media (max-width: 768px) {
         .header {
             height: auto; /* Adjusts height on smaller screens */
+            width: 100%; /* Ensures full width on small screens */
         }
     }
 </style>
