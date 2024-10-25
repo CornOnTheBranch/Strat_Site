@@ -8,17 +8,22 @@
     <meta http-equiv="author" content="COTB">
     <meta name="keywords" content="COTB, web design, sample, practice">
     <link rel="stylesheet" href="style.css">
+    <script>
+        function loadHTML(elementId, filePath) {
+            fetch(filePath)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+    </script>
 </head>
 
-<body>
+<body onload="loadHTML('header', 'header.html'); loadHTML('footer', 'footer.html');">
     <div class="container">
         <!-- HEADER -->
-        <header>
-            <div class="header" style="background-image: url('Images/COTB01_Peak.jpg');">
-                <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo" style="width: 40px; height: auto; border-radius: 10px; opacity: 0.8;">
-                <h1 style="margin-top: 20px; font-size: 2.5rem;">COTB</h1>
-            </div>
-        </header>
+        <header id="header"></header>
 
         <!-- MAIN CONTENT -->
         <main class="main">
@@ -30,8 +35,7 @@
 
         <!-- FEATURED CONTENT SECTION -->
         <section class="features">
-
-                       <!-- New Feature Box: COTB00 R n D, 2020 -->
+            <!-- New Feature Box: COTB00 R n D, 2020 -->
             <div class="feature">
                 <a href="#">
                     <img src="Images/COTB00_RnD.png" alt="COTB00 R n D, 2020" style="max-width: 100%; height: auto; border-radius: 5px; object-fit: cover;">
@@ -63,20 +67,10 @@
                 </a>
                 <h3>COTB03 Flight, 2024</h3>
             </div>
-
-         </section>
+        </section>
 
         <!-- FOOTER -->
-        <footer>
-            <div class="social-icons">
-                <a href="https://www.patreon.com/c/COTB000" target="_blank"><img src="Images/Patreon_logo.png" alt="Patreon" class="icon"></a>
-                <a href="https://youtu.be/PDOmuuX6oBQ?si=GJSyy66zqy7MZLyG" target="_blank"><img src="Images/YouTube_logo.png" alt="YouTube" class="icon"></a>
-                <a href="https://ko-fi.com/c_o_t_b" target="_blank"><img src="Images/Ko-Fi_logo2.png" alt="Ko-fi" class="icon"></a>
-                <a href="https://www.facebook.com/profile.php?id=61563983050664" target="_blank"><img src="Images/FB_logo2.png" alt="Facebook" class="icon"></a>
-            </div>
-            <p>COTB Science, PO Box 259, Morecambe, LA4 9ED</p>
-            <p>&copy; 2024 COTB, All Rights Reserved.</p>
-        </footer>
+        <footer id="footer"></footer>
     </div>
 
     <!-- Inline styling for layout -->
@@ -185,14 +179,14 @@
             border-radius: 5px;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .feature {
-                flex: 1 1 100%; /* Full width on mobile */
-                height: auto; /* Let the height be dynamic */
+            .features {
+                flex-direction: column; /* Stack vertically on smaller screens */
+                align-items: center; /* Center align */
             }
-            .video-container {
-                max-width: 100%; /* Full width on mobile */
+
+            .feature {
+                max-width: 100%; /* Allow full width for smaller screens */
             }
         }
     </style>
