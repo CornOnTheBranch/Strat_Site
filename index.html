@@ -15,14 +15,17 @@
         <!-- HEADER -->
         <header>
             <div class="header" style="background-image: url('Images/COTB01_Peak.jpg'); opacity: 0.5;">
-                <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo">
-                <h1>COTB</h1>
+                <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo" style="border-radius: 10px; opacity: 0.8;">
+                <h1 style="position: absolute; top: 20%; font-size: 2.5rem;">COTB</h1>
             </div>
         </header>
 
         <!-- MAIN CONTENT -->
         <main class="main">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/do2z4YF2p2c?si=247QE-ZVbFgurXa0" frameborder="0" allowfullscreen></iframe>
+            <div class="video-container">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/do2z4YF2p2c?si=247QE-ZVbFgurXa0" frameborder="0" allowfullscreen></iframe>
+                <h2 style="text-align: center;">COTB Project Intro</h2>
+            </div>
         </main>
 
         <!-- FEATURED CONTENT SECTION -->
@@ -43,17 +46,17 @@
 
         <!-- FOOTER -->
         <footer>
-            &copy; 2024 COTB, All Rights Reserved.<br>
-            COTB Science, PO Box 259, Morecambe, LA4 9ED<br>
             <div class="social-icons">
                 <a href="https://www.patreon.com/c/COTB000" target="_blank"><img src="Images/Patreon_logo.png" alt="Patreon" class="icon"></a>
                 <a href="https://youtu.be/PDOmuuX6oBQ?si=GJSyy66zqy7MZLyG" target="_blank"><img src="Images/YouTube_logo.png" alt="YouTube" class="icon"></a>
                 <a href="https://ko-fi.com/c_o_t_b" target="_blank"><img src="Images/KoFi_logo.png" alt="Ko-fi" class="icon"></a>
             </div>
+            COTB Science, PO Box 259, Morecambe, LA4 9ED<br>
+            &copy; 2024 COTB, All Rights Reserved.
         </footer>
     </div>
 
-    <!-- Inline styling -->
+    <!-- Inline styling for layout -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,26 +68,21 @@
         .header {
             background-size: cover;
             background-position: center;
-            padding: 40px;
+            padding: 100px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             color: white;
             text-align: center;
             position: relative;
-            opacity: 0.5;
         }
 
         .logo {
-            width: 50px;
+            width: 80px;
             height: auto;
             margin-right: 15px;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            display: inline;
+            border-radius: 10px;
+            opacity: 0.8;
         }
 
         .main {
@@ -93,6 +91,12 @@
             background-color: white;
             border-radius: 5px;
             text-align: center;
+        }
+
+        .video-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .features {
@@ -125,14 +129,15 @@
 
         .social-icons {
             display: flex;
-            gap: 10px;
+            gap: 20px;
             justify-content: center;
-            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         .icon {
-            width: 30px;
-            height: auto;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
         }
     </style>
 </body>
