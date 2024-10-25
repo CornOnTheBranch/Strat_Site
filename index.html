@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COTB</title>
-    <meta name="description" content="A sample website for COTB">
+    <meta name="description" content="COTB Site in progress!">
     <meta http-equiv="author" content="COTB">
-    <meta name="keywords" content="COTB, web design, sample, practice">
+    <meta name="keywords" content="COTB">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -33,7 +33,7 @@
             <!-- COTB01 Flight, 2022 -->
             <div class="feature">
                 <a href="cotb01_flight_2022.html">
-                    <img src="Images/COTB01_Peak_metrics.jpg" alt="COTB01 Flight, 2022" style="width:100%; border-radius: 5px;">
+                    <img src="Images/COTB01_Peak_metrics.jpg" alt="COTB01 Flight, 2022" style="max-width: 100%; height: auto; border-radius: 5px; object-fit: cover;">
                 </a>
                 <h3>COTB01 Flight, 2022</h3>
             </div>
@@ -41,7 +41,7 @@
             <!-- COTB02 Flight, 2024 -->
             <div class="feature">
                 <a href="cotb02_flight_2024.html">
-                    <img src="Images/COTB02_Peak.jpg" alt="COTB02 Flight, 2024" style="width:100%; border-radius: 5px;">
+                    <img src="Images/COTB02_Peak.jpg" alt="COTB02 Flight, 2024" style="max-width: 100%; height: auto; border-radius: 5px; object-fit: cover;">
                 </a>
                 <h3>COTB02 Flight, 2024</h3>
             </div>
@@ -68,7 +68,6 @@
             <p>COTB Science, PO Box 259, Morecambe, LA4 9ED</p>
             <p>&copy; 2024 COTB, All Rights Reserved.</p>
         </footer>
-
     </div>
 
     <!-- Inline styling for layout -->
@@ -133,8 +132,8 @@
         }
 
         .feature {
-            flex: 1;
-            min-width: 200px;
+            flex: 1 1 calc(33% - 20px); /* Responsive layout for three boxes */
+            min-width: 250px; /* Ensures the box does not get too small */
             background-color: #ffffff;
             border-radius: 5px;
             padding: 20px;
@@ -173,6 +172,14 @@
             width: 40px;
             height: 40px;
             border-radius: 5px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .feature {
+                flex: 1 1 100%; /* Full width on mobile */
+                height: auto; /* Let the height be dynamic */
+            }
         }
     </style>
 </body>
