@@ -22,14 +22,15 @@
     .header {
         max-width: 1080px; /* Limit width on larger screens */
         width: 100%; /* Allow full width within container */
-        height: 100px; /* Header height */
+        height: 140px; /* Increased height for better spacing */
         background-color: #f0f0f0; /* Light background color */
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between; /* Space between the header content and button band */
         position: relative;
         margin: 0 auto; /* Center the header horizontally */
+        padding: 10px 0; /* Add padding for better spacing */
     }
 
     /* Centered content */
@@ -59,8 +60,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        bottom: 0;
     }
 
     /* Button placeholder styling */
@@ -82,6 +81,7 @@
     @media (max-width: 600px) {
         .header {
             width: 80%; /* Set header to 80% of the screen width on smaller devices */
+            height: auto; /* Allow header to adjust height automatically */
         }
     }
 </style>
