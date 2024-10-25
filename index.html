@@ -8,39 +8,51 @@
     <meta http-equiv="author" content="COTB">
     <meta name="keywords" content="COTB, web design, sample, practice">
     <link rel="stylesheet" href="style.css">
-    <script src="https://example.com/external-script.js"></script>
 </head>
 <body>
     <div class="container">
         <!-- HEADER -->
         <header>
-            <div class="header" style="background-image: url('Images/COTB01_Peak.jpg'); opacity: 0.5;">
-                <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo" style="border-radius: 10px; opacity: 0.8;">
+            <div class="header" style="background-image: url('Images/COTB01_Peak.jpg'); opacity: 0.8;">
                 <h1 style="font-size: 2.5rem;">COTB</h1>
+                <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo" style="border-radius: 10px; opacity: 0.8;">
             </div>
         </header>
 
         <!-- MAIN CONTENT -->
         <main class="main">
             <div class="video-container">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/do2z4YF2p2c?si=247QE-ZVbFgurXa0" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="506px" src="https://www.youtube.com/embed/do2z4YF2p2c?si=247QE-ZVbFgurXa0" frameborder="0" allowfullscreen></iframe>
                 <h2 style="text-align: center;">COTB Project Intro</h2>
             </div>
         </main>
 
         <!-- FEATURED CONTENT SECTION -->
         <section class="features">
+            <!-- COTB02 Flight, 2024 -->
+            <div class="feature">
+                <a href="cotb02_flight_2024.html">
+                    <img src="Images/COTB01_Peak_metrics.jpg" alt="COTB02 Flight, 2024" style="width:100%; border-radius: 5px;">
+                </a>
+                <h3>COTB02 Flight, 2024</h3>
+            </div>
+
+            <!-- COTB01 Flight, 2022 -->
             <div class="feature">
                 <a href="cotb01_flight_2022.html">
                     <img src="Images/COTB02_Peak.jpg" alt="COTB01 Flight, 2022" style="width:100%; border-radius: 5px;">
                 </a>
                 <h3>COTB01 Flight, 2022</h3>
             </div>
+
+            <!-- COTB03 Flight, 2024 (Placeholder with Question Mark) -->
             <div class="feature">
-                <a href="cotb02_flight_2024.html">
-                    <img src="Images/COTB01_Peak_metrics.jpg" alt="COTB02 Flight, 2024" style="width:100%; border-radius: 5px;">
+                <a href="#">
+                    <div class="placeholder" style="width: 100%; padding-top: 56.25%; background-color: #ddd; position: relative; border-radius: 5px; text-align: center;">
+                        <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; color: #555;">?</span>
+                    </div>
                 </a>
-                <h3>COTB02 Flight, 2024</h3>
+                <h3>COTB03 Flight, 2024</h3>
             </div>
         </section>
 
@@ -75,13 +87,14 @@
             color: white;
             text-align: center;
             position: relative;
-            flex-direction: column; /* Stack logo above text */
+            flex-direction: column;
+            opacity: 0.9;
         }
 
         .logo {
             width: 80px;
             height: auto;
-            margin-bottom: 10px;
+            margin-top: 10px;
             border-radius: 10px;
             opacity: 0.8;
         }
@@ -95,7 +108,9 @@
         }
 
         .video-container {
-            max-width: 900px; /* 50% increase from typical 600px */
+            max-width: 900px;
+            height: auto;
+            aspect-ratio: 16 / 9;
             margin: 0 auto;
             padding: 20px;
         }
@@ -115,6 +130,15 @@
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .placeholder {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background-color: #ddd;
+            border-radius: 5px;
             text-align: center;
         }
 
