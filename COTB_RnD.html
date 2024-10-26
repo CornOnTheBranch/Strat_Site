@@ -29,7 +29,7 @@
 
         <!-- MAIN CONTENT -->
         <main class="main">
-            <!-- Combined Feature Box -->
+            <!-- Feature Boxes for Media -->
             <div class="feature-box combined">
                 <img src="Images/TX_3km.jpg" alt="TX 3km Image">
                 <video width="100%" controls>
@@ -38,7 +38,7 @@
                 </video>
             </div>
 
-            <!-- Collage of Images -->
+            <!-- Collage of Images in Single Row -->
             <div class="feature-box collage">
                 <img src="Images/Trophy.jpg" alt="Trophy Image">
                 <img src="Images/Resonance.jpg" alt="Resonance Image">
@@ -98,11 +98,11 @@
             opacity: 0.9;
         }
 
-        /* Collage styling */
+        /* Collage styling for single row */
         .collage {
             display: flex;
+            justify-content: space-between;
             gap: 10px;
-            flex-wrap: nowrap; /* Ensures images stay in a single row */
         }
 
         .collage img {
@@ -120,12 +120,12 @@
             }
 
             .collage {
-                flex-wrap: wrap; /* Allows wrapping for smaller screens */
+                flex-direction: row; /* Keeps images in a single row */
             }
 
             .collage img {
-                width: 100%;
-                height: auto; /* Responsive height on smaller screens */
+                width: 33.33%;
+                height: auto; /* Allow responsive height on smaller screens */
             }
         }
     </style>
