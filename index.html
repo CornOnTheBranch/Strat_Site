@@ -27,56 +27,58 @@
 </head>
 
 <body onload="loadHTML('header', 'header.html'); loadHTML('footer', 'footer.html');">
-    <div class="container">
-        <!-- HEADER -->
-        <header id="header"></header>
+    <div class="wrapper">
+        <div class="container">
+            <!-- HEADER -->
+            <header id="header"></header>
 
-        <!-- MAIN CONTENT -->
-        <main class="main">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/do2z4YF2p2c?si=247QE-ZVbFgurXa0" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </main>
+            <!-- MAIN CONTENT -->
+            <main class="main">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/do2z4YF2p2c?si=247QE-ZVbFgurXa0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </main>
 
-        <!-- FEATURED CONTENT SECTION -->
-        <section class="features">
-            <!-- COTB00 R n D, 2020 -->
-            <div class="feature">
-                <a href="COTB_RnD.html">
-                    <img src="Images/COTB00_RnD.png" alt="COTB00 R n D, 2020">
-                </a>
-                <h3>COTB RnD, 2020</h3>
-            </div>
+            <!-- FEATURED CONTENT SECTION -->
+            <section class="features">
+                <!-- COTB00 R n D, 2020 -->
+                <div class="feature">
+                    <a href="COTB_RnD.html">
+                        <img src="Images/COTB00_RnD.png" alt="COTB00 R n D, 2020">
+                    </a>
+                    <h3>COTB RnD, 2020</h3>
+                </div>
 
-            <!-- COTB01 Flight, 2022 -->
-            <div class="feature">
-                <a href="COTB001.html">
-                    <img src="Images/COTB01_Peak_metrics.jpg" alt="COTB01 Flight, 2022">
-                </a>
-                <h3>COTB01 Flight, 2022</h3>
-            </div>
+                <!-- COTB01 Flight, 2022 -->
+                <div class="feature">
+                    <a href="COTB001.html">
+                        <img src="Images/COTB01_Peak_metrics.jpg" alt="COTB01 Flight, 2022">
+                    </a>
+                    <h3>COTB01 Flight, 2022</h3>
+                </div>
 
-            <!-- COTB02 Flight, 2024 -->
-            <div class="feature">
-                <a href="COTB002.html">
-                    <img src="Images/COTB02_Peak.jpg" alt="COTB02 Flight, 2024">
-                </a>
-                <h3>COTB02 Flight, 2024</h3>
-            </div>
+                <!-- COTB02 Flight, 2024 -->
+                <div class="feature">
+                    <a href="COTB002.html">
+                        <img src="Images/COTB02_Peak.jpg" alt="COTB02 Flight, 2024">
+                    </a>
+                    <h3>COTB02 Flight, 2024</h3>
+                </div>
 
-            <!-- COTB03 Flight, 2024 Placeholder -->
-            <div class="feature">
-                <a href="COTB003.html">
-                    <div class="placeholder">
-                        <span>?</span>
-                    </div>
-                </a>
-                <h3>COTB03 Flight, 2024</h3>
-            </div>
-        </section>
+                <!-- COTB03 Flight, 2024 Placeholder -->
+                <div class="feature">
+                    <a href="COTB003.html">
+                        <div class="placeholder">
+                            <span>?</span>
+                        </div>
+                    </a>
+                    <h3>COTB03 Flight, 2024</h3>
+                </div>
+            </section>
 
-        <!-- FOOTER -->
-        <footer id="footer" class="footer-container"></footer>
+            <!-- FOOTER -->
+            <footer id="footer" class="footer-container"></footer>
+        </div>
     </div>
 
     <!-- Inline styling for layout -->
@@ -88,6 +90,13 @@
             padding: 0;
         }
 
+        .wrapper {
+            max-width: 1080px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 10px; /* Padding for small screen breathing room */
+        }
+
         .main {
             margin: 20px;
             padding: 20px;
@@ -97,7 +106,7 @@
         }
 
         .video-container {
-            width: 640px; /* Fixed width for desktop */
+            width: 100%;
             height: 400px;
             margin: 0 auto;
             text-align: center;
