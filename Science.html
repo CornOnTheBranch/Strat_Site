@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML> 
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
@@ -30,6 +30,16 @@
         <!-- MAIN CONTENT -->
         <main class="main">
             <!-- Additional content can be added here -->
+
+            <!-- Windy Embed -->
+            <div class="windy-embed">
+                <iframe
+                    width="100%"
+                    height="500"
+                    src="https://embed.windy.com/embed2.html?lat=50.737&lon=-3.471&zoom=5&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=50.737&detailLon=-3.471&metricWind=default&metricTemp=default&radarRange=-1"
+                    frameborder="0">
+                </iframe>
+            </div>
         </main>
 
         <!-- FOOTER -->
@@ -53,6 +63,11 @@
             padding: 20px 10px;
             background-color: #333;
             color: white;
+        }
+
+        .windy-embed {
+            max-width: 1080px;
+            margin: 20px auto;
         }
     </style>
 </body>
