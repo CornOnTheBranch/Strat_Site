@@ -101,7 +101,8 @@
         /* Collage styling */
         .collage {
             display: flex;
-            gap: 10px; /* Space between images */
+            gap: 10px;
+            flex-wrap: nowrap; /* Ensures images stay in a single row */
         }
 
         .collage img {
@@ -119,12 +120,12 @@
             }
 
             .collage {
-                flex-direction: row;
+                flex-wrap: wrap; /* Allows wrapping for smaller screens */
             }
 
             .collage img {
                 width: 100%;
-                height: auto; /* Allow responsive height on smaller screens */
+                height: auto; /* Responsive height on smaller screens */
             }
         }
     </style>
