@@ -118,8 +118,9 @@
             margin: 20px;
         }
 
+        /* Each feature box */
         .feature {
-            flex: 1 1 200px;
+            flex: 1 1 calc(25% - 20px); /* Four boxes per row on desktop */
             background-color: #ffffff;
             border-radius: 5px;
             padding: 20px;
@@ -128,10 +129,17 @@
             max-width: 220px;
         }
 
+        /* Responsive layout for tablet screens */
+        @media (max-width: 1024px) {
+            .feature {
+                flex: 1 1 calc(50% - 20px); /* Two boxes per row on medium screens */
+            }
+        }
+
         /* Responsive layout for smaller screens */
         @media (max-width: 768px) {
             .feature {
-                flex: 1 1 calc(50% - 20px);
+                flex: 1 1 calc(50% - 20px); /* Two boxes per row on smaller screens */
                 max-width: 100%;
             }
         }
