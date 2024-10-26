@@ -29,18 +29,20 @@
 
         <!-- MAIN CONTENT -->
         <main class="main">
-            <!-- Embedded Video -->
-            <div class="media">
-                <video width="320" height="240" controls>
+            <!-- Feature Boxes for Media -->
+            <div class="feature-box">
+                <video width="100%" controls>
                     <source src="Images/320x240_3km-1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
 
-            <!-- Images -->
-            <div class="media">
-                <img src="Images/TX_3km.jpg" alt="TX 3km Image" style="max-width: 100%; height: auto;">
-                <img src="Images/Trophy.jpg" alt="Trophy Image" style="max-width: 100%; height: auto;">
+            <div class="feature-box">
+                <img src="Images/TX_3km.jpg" alt="TX 3km Image" style="width: 100%; height: auto;">
+            </div>
+
+            <div class="feature-box">
+                <img src="Images/Trophy.jpg" alt="Trophy Image" style="width: 100%; height: auto;">
             </div>
         </main>
 
@@ -67,9 +69,15 @@
             color: white;
         }
 
-        .media {
+        .feature-box {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin: 20px 0;
         }
     </style>
 </body>
