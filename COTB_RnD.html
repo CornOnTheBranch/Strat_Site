@@ -29,7 +29,19 @@
 
         <!-- MAIN CONTENT -->
         <main class="main">
-            <!-- Additional content can be added here -->
+            <!-- Embedded Video -->
+            <div class="media">
+                <video width="320" height="240" controls>
+                    <source src="Images/320x240_3km-1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Images -->
+            <div class="media">
+                <img src="Images/TX_3km.jpg" alt="TX 3km Image" style="max-width: 100%; height: auto;">
+                <img src="Images/Trophy.jpg" alt="Trophy Image" style="max-width: 100%; height: auto;">
+            </div>
         </main>
 
         <!-- FOOTER -->
@@ -46,13 +58,18 @@
         }
 
         .footer-container {
-            max-width: 1080px; /* Restrict footer width to 1080px */
-            width: 100%; /* Allow full width within container */
-            margin: 0 auto; /* Center align the footer */
+            max-width: 1080px;
+            width: 100%;
+            margin: 0 auto;
             text-align: center;
             padding: 20px 10px;
             background-color: #333;
             color: white;
+        }
+
+        .media {
+            text-align: center;
+            margin: 20px 0;
         }
     </style>
 </body>
