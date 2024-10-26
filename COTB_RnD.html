@@ -41,8 +41,10 @@
                 <img src="Images/TX_3km.jpg" alt="TX 3km Image" style="width: 100%; height: auto;">
             </div>
 
-            <div class="feature-box">
-                <img src="Images/Trophy.jpg" alt="Trophy Image" style="width: 100%; height: auto;">
+            <div class="feature-box collage">
+                <img src="Images/Trophy.jpg" alt="Trophy Image">
+                <img src="Images/Resonance.jpg" alt="Resonance Image">
+                <img src="Images/Drone_banana.jpg" alt="Drone Banana Image">
             </div>
         </main>
 
@@ -90,10 +92,31 @@
             height: auto;
         }
 
+        /* Collage styling */
+        .collage {
+            display: flex;
+            gap: 10px; /* Space between images */
+        }
+
+        .collage img {
+            width: calc(33.33% - 7px); /* Each image takes up 1/3 of the box width */
+            height: auto;
+            border-radius: 10px;
+            opacity: 0.9;
+        }
+
         /* Responsive styling */
         @media (max-width: 600px) {
             .feature-box {
                 width: 80%;
+            }
+
+            .collage {
+                flex-direction: column;
+            }
+
+            .collage img {
+                width: 100%;
             }
         }
     </style>
