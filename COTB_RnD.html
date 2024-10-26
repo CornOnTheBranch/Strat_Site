@@ -100,7 +100,8 @@
 
         .collage img {
             width: calc(33.33% - 7px); /* Each image takes up 1/3 of the box width */
-            height: auto;
+            height: 200px; /* Fixed height for consistent row alignment */
+            object-fit: cover; /* Ensures images cover the area while keeping equal height */
             border-radius: 10px;
             opacity: 0.9;
         }
@@ -117,6 +118,7 @@
 
             .collage img {
                 width: 100%;
+                height: auto; /* Allow responsive height on smaller screens */
             }
         }
     </style>
