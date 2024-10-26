@@ -23,36 +23,38 @@
 </head>
 
 <body onload="loadHTML('header', 'header.html'); loadHTML('footer', 'footer.html');">
-    <div class="container">
-        <!-- HEADER -->
-        <header id="header"></header>
+    <div class="wrapper">
+        <div class="container">
+            <!-- HEADER -->
+            <header id="header"></header>
 
-        <!-- MAIN CONTENT -->
-        <main class="main">
-            <!-- Embedded Content Section -->
-            <div class="embed-container">
-                <!-- Windy Embed -->
-                <iframe class="embed-item"
-                    src="https://embed.windy.com/embed2.html?lat=50.737&lon=-3.471&zoom=5&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=50.737&detailLon=-3.471&metricWind=default&metricTemp=default&radarRange=-1"
-                    frameborder="0">
-                </iframe>
+            <!-- MAIN CONTENT -->
+            <main class="main">
+                <!-- Embedded Content Section -->
+                <div class="embed-container">
+                    <!-- Windy Embed -->
+                    <iframe class="embed-item"
+                        src="https://embed.windy.com/embed2.html?lat=50.737&lon=-3.471&zoom=5&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=50.737&detailLon=-3.471&metricWind=default&metricTemp=default&radarRange=-1"
+                        frameborder="0">
+                    </iframe>
 
-                <!-- SondeHub Embed -->
-                <iframe class="embed-item"
-                    src="https://amateur.sondehub.org/#!mt=Mapnik&mz=5&qm=12h&mc=53.47497,-2.19727"
-                    frameborder="0">
-                </iframe>
+                    <!-- SondeHub Embed -->
+                    <iframe class="embed-item"
+                        src="https://amateur.sondehub.org/#!mt=Mapnik&mz=5&qm=12h&mc=53.47497,-2.19727"
+                        frameborder="0">
+                    </iframe>
 
-                <!-- Google My Maps Embed -->
-                <iframe class="embed-item"
-                    src="https://www.google.com/maps/d/embed?mid=1BktWMPYNuh6N5_IPngyq8jW80nAWXI8d&ll=54.76858900457577%2C-4.57902077830178&z=6"
-                    frameborder="0">
-                </iframe>
-            </div>
-        </main>
+                    <!-- Google My Maps Embed -->
+                    <iframe class="embed-item"
+                        src="https://www.google.com/maps/d/embed?mid=1BktWMPYNuh6N5_IPngyq8jW80nAWXI8d&ll=54.76858900457577%2C-4.57902077830178&z=6"
+                        frameborder="0">
+                    </iframe>
+                </div>
+            </main>
 
-        <!-- FOOTER -->
-        <footer id="footer" class="footer-container"></footer>
+            <!-- FOOTER -->
+            <footer id="footer" class="footer-container"></footer>
+        </div>
     </div>
 
     <!-- Inline styling for layout -->
@@ -62,6 +64,13 @@
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+        }
+
+        .wrapper {
+            max-width: 1080px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 10px;
         }
 
         .main {
