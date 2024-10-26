@@ -29,7 +29,39 @@
 
         <!-- MAIN CONTENT -->
         <main class="main">
-            <!-- Additional content can be added here -->
+            <!-- Feature Boxes for Media -->
+            <div class="feature-box">
+                <video width="100%" controls>
+                    <source src="Images/Peak_Alt_2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="feature-box">
+                <img src="Images/COTB01_Peak.jpg" alt="COTB Peak Image" style="width: 100%; height: auto;">
+            </div>
+
+            <div class="feature-box">
+                <video width="100%" controls>
+                    <source src="Images/Balloon_Exp.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="feature-box">
+                <video width="100%" controls>
+                    <source src="Images/320x240_3km-1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="feature-box">
+                <img src="Images/TX_3km.jpg" alt="TX 3km Image" style="width: 100%; height: auto;">
+            </div>
+
+            <div class="feature-box">
+                <img src="Images/Resonance.jpg" alt="Resonance Image" style="width: 100%; height: auto;">
+            </div>
         </main>
 
         <!-- FOOTER -->
@@ -38,22 +70,51 @@
 
     <!-- Inline styling for layout -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+        body, html {
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
         }
 
         .footer-container {
-            max-width: 1080px; /* Restrict footer width to 1080px */
-            width: 100%; /* Allow full width within container */
-            margin: 0 auto; /* Center align the footer */
+            max-width: 1080px;
+            width: 100%;
+            margin: 0 auto;
             text-align: center;
             padding: 20px 10px;
             background-color: #333;
             color: white;
         }
+
+        .feature-box {
+            max-width: 600px;
+            width: 100%;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-box video, .feature-box img {
+            border-radius: 10px;
+            opacity: 0.9;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            .feature-box {
+                width: 80%;
+            }
+        }
     </style>
 </body>
 </html>
+
