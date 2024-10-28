@@ -5,7 +5,7 @@
         <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo">
     </div>
     <div class="button-band">
-        <a href="index.html" class="button-placeholder">Home</a>
+        <a href="index.html" class="button-placeholder">Home</a> <!-- Updated link to index.html -->
         <a href="Science.html" class="button-placeholder">Telemetry</a>
         <a href="Supplies.html" class="button-placeholder">Support</a>
     </div>
@@ -20,16 +20,16 @@
 
     /* Header styling */
     .header {
-        max-width: 1080px;
-        width: 100%;
-        background-color: #f0f0f0;
+        max-width: 1080px; /* Limit width on larger screens */
+        width: 100%; /* Allow full width within container */
+        background-color: #f0f0f0; /* Light background color */
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-between; /* Space between the header content and button band */
         position: relative;
-        margin: 0 auto;
-        padding: 10px 0;
+        margin: 0 auto; /* Center the header horizontally */
+        padding: 10px 0; /* Add padding for better spacing */
     }
 
     /* Centered content */
@@ -45,8 +45,8 @@
     }
 
     .trademark {
-        font-size: 0.5em;
-        vertical-align: super;
+        font-size: 0.5em; /* Adjust as needed to reduce size */
+        vertical-align: super; /* Aligns it slightly higher */
     }
 
     .logo {
@@ -54,65 +54,61 @@
         height: 100px;
         border-radius: 10px;
         opacity: 0.8;
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Add space between the logo and button band */
     }
 
     .button-band {
-        position: relative;
         width: 100%;
         height: 40px;
-        background-color: #333; /* Base background color */
+        background: linear-gradient(90deg, #444, #333, #444); /* Gradient effect */
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden; /* Prevent overflow from pseudo-elements */
-    }
-
-    .button-band::before,
-    .button-band::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 50px; /* Adjust this width as needed */
-        background-color: #333; /* Same color as button band */
-        filter: blur(2px);
+        overflow: hidden;
     }
 
     .button-band::before {
-        left: 0; /* Position on the left */
-        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 20%, rgba(51, 51, 51, 1) 100%);
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 300%;
+        height: 100%;
+        background-image: url('wave.svg'); /* Use a wave SVG for a wave effect */
+        background-size: 50% 50%;
+        animation: wave 5s linear infinite; /* Animation */
+        opacity: 0.5; /* Adjust opacity for subtlety */
     }
 
-    .button-band::after {
-        right: 0; /* Position on the right */
-        background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 20%, rgba(51, 51, 51, 1) 100%);
+    @keyframes wave {
+        0% { background-position: 0 0; }
+        100% { background-position: 100% 0; }
     }
 
     /* Button placeholder styling */
     .button-placeholder {
         background-color: #555;
         color: white;
-        width: 80px;
-        height: 25px;
+        padding: 10px 20px;
         border-radius: 8px;
         margin: 0 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 0.9rem;
-        text-decoration: none;
-        transition: background-color 0.3s;
+        text-decoration: none; /* Remove underline */
+        transition: background-color 0.3s; /* Add transition for hover effect */
     }
 
     .button-placeholder:hover {
-        background-color: #777;
+        background-color: #777; /* Change background color on hover */
     }
 
     /* Responsive styling for smaller screens */
     @media (max-width: 600px) {
         .header {
-            width: 80%;
+            width: 80%; /* Set header to 80% of the screen width on smaller devices */
         }
     }
 </style>
