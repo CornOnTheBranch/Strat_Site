@@ -75,24 +75,18 @@
         top: 0;
         height: 100%;
         width: 50px; /* Adjust this width as needed */
-        background: inherit; /* Use the same background */
-        background-image: repeating-linear-gradient(
-            45deg,
-            rgba(255, 255, 255, 0.1) 0%,
-            rgba(255, 255, 255, 0.1) 10%,
-            rgba(51, 51, 51, 1) 10%,
-            rgba(51, 51, 51, 1) 20%
-        ); /* Simulates pixelation */
-        filter: blur(2px); /* Optional: Add a slight blur */
+        background-color: #333; /* Same color as button band */
+        filter: blur(2px);
     }
 
     .button-band::before {
         left: 0; /* Position on the left */
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 20%, rgba(51, 51, 51, 1) 100%);
     }
 
     .button-band::after {
         right: 0; /* Position on the right */
-        transform: scaleX(-1); /* Flip for the right side */
+        background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 20%, rgba(51, 51, 51, 1) 100%);
     }
 
     /* Button placeholder styling */
