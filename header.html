@@ -1,6 +1,7 @@
 <!-- header.html -->
 <div class="header">
     <div class="header-content">
+        <img src="Images/electronic-device-with-an-antenna-svgrepo-com.svg" alt="Device Icon" class="device-icon">
         <h1 class="header-title">COTB<span class="trademark">®</span></h1>
         <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo">
     </div>
@@ -18,83 +19,93 @@
         height: 100%;
     }
 
- /* Header styling */
-.header {
-    max-width: 1080px; /* Limit width on larger screens */
-    width: 100%; /* Allow full width within container */
-    background-color: #f0f0f0; /* Light background color */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* Space between the header content and button band */
-    position: relative;
-    margin: 0 auto; /* Center the header horizontally */
-    padding: 10px 0; /* Add padding for better spacing */
-}
-
-/* Centered content */
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.header-title {
-    font-size: 2rem;
-    margin: 0;
-}
-
-.trademark {
-    font-size: 0.5em; /* Adjust as needed to reduce size */
-    vertical-align: super; /* Aligns it slightly higher */
-}
-
-.logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    opacity: 0.8;
-    margin-bottom: 20px; /* Add space between the logo and button band */
-}
-
-/* Bottom band styling */
-.button-band {
-    width: 100%;
-    height: 50px; /* Increased height for better button visibility */
-    background: linear-gradient(135deg, #1c1c1c, #333); /* Gradient background */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Button placeholder styling */
-.button-placeholder {
-    background-color: #444; /* Darker background for buttons */
-    color: #ffffff;
-    width: 90px; /* Slightly wider buttons */
-    height: 30px; /* Taller buttons */
-    border-radius: 8px;
-    margin: 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem; /* Slightly larger font size */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
-}
-
-.button-placeholder:hover {
-    background-color: #5EBE76; /* Change background color on hover */
-    transform: translateY(-2px); /* Lift effect */
-    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.8); /* Glow effect on hover */
-}
-
-/* Responsive styling for smaller screens */
-@media (max-width: 600px) {
+    /* Header styling */
     .header {
-        width: 80%; /* Set header to 80% of the screen width on smaller devices */
+        max-width: 1080px; /* Limit width on larger screens */
+        width: 100%; /* Allow full width within container */
+        background-color: #f0f0f0; /* Light background color */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between; /* Space between the header content and button band */
+        position: relative;
+        margin: 0 auto; /* Center the header horizontally */
+        padding: 10px 0; /* Add padding for better spacing */
     }
-}
 
+    /* Centered content */
+    .header-content {
+        display: flex;
+        flex-direction: row; /* Change to row for horizontal alignment */
+        align-items: center;
+    }
+
+    .device-icon {
+        width: 50px; /* Set desired width */
+        height: auto; /* Maintain aspect ratio */
+        position: absolute; /* Position it relative to the header */
+        left: calc(50% - 100px); /* Adjust this to position 50px left of the logo */
+        top: 10px; /* Adjust as needed for vertical alignment */
+        z-index: 1; /* Ensure it sits above the button band */
+    }
+
+    .header-title {
+        font-size: 2rem;
+        margin: 0;
+        margin-left: 60px; /* Add space to the left to avoid overlap with the icon */
+    }
+
+    .trademark {
+        font-size: 0.5em; /* Adjust as needed to reduce size */
+        vertical-align: super; /* Aligns it slightly higher */
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        opacity: 0.8;
+        margin-left: 20px; /* Space between the logo and title */
+        margin-bottom: 20px; /* Add space between the logo and button band */
+    }
+
+    /* Bottom band styling */
+    .button-band {
+        width: 100%;
+        height: 50px; /* Increased height for better button visibility */
+        background: linear-gradient(135deg, #1c1c1c, #333); /* Gradient background */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Button placeholder styling */
+    .button-placeholder {
+        background-color: #444; /* Darker background for buttons */
+        color: #ffffff;
+        width: 90px; /* Slightly wider buttons */
+        height: 30px; /* Taller buttons */
+        border-radius: 8px;
+        margin: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem; /* Slightly larger font size */
+        text-decoration: none; /* Remove underline */
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+    }
+
+    .button-placeholder:hover {
+        background-color: #5EBE76; /* Change background color on hover */
+        transform: translateY(-2px); /* Lift effect */
+        box-shadow: 0 4px 15px rgba(0, 255, 204, 0.8); /* Glow effect on hover */
+    }
+
+    /* Responsive styling for smaller screens */
+    @media (max-width: 600px) {
+        .header {
+            width: 80%; /* Set header to 80% of the screen width on smaller devices */
+        }
+    }
 </style>
