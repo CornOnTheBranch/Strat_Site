@@ -1,9 +1,11 @@
 <!-- header.html -->
 <div class="header">
     <div class="header-content">
-        <img src="Images/satellite-dish-svgrepo-com.svg" alt="Satellite Dish" class="satellite-dish">
+        <div class="logo-container">
+            <img src="Images/satellite-dish-svgrepo-com.svg" alt="Satellite Dish" class="satellite-dish">
+            <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo">
+        </div>
         <h1 class="header-title">COTB<span class="trademark">®</span></h1>
-        <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo">
     </div>
     <div class="button-band">
         <a href="index.html" class="button-placeholder">Home</a>
@@ -36,7 +38,12 @@
     /* Centered content */
     .header-content {
         display: flex;
-        align-items: center; /* Align items in the center */
+        flex-direction: column; /* Adjust to column to stack items */
+        align-items: center; /* Center items */
+    }
+
+    .logo-container {
+        position: relative; /* Allows absolute positioning of child elements */
     }
 
     .header-title {
@@ -49,20 +56,23 @@
         vertical-align: super; /* Aligns it slightly higher */
     }
 
+    .satellite-dish {
+        position: absolute; /* Allows the SVG to overlay */
+        left: -50px; /* Adjust this value to position the SVG */
+        top: 50%; /* Center the SVG vertically within the logo container */
+        transform: translateY(-50%); /* Adjust for vertical centering */
+        width: 50px; /* Set the size of the satellite dish */
+        height: 50px; /* Set the size of the satellite dish */
+        opacity: 0.8; /* Optional: adjust opacity */
+        z-index: 1; /* Ensure the SVG is above other elements */
+    }
+
     .logo {
         width: 100px;
         height: 100px;
         border-radius: 10px;
         opacity: 0.8;
-        margin-left: 20px; /* Add space between the logo and title */
-        margin-bottom: 20px; /* Add space between the logo and button band */
-    }
-
-    .satellite-dish {
-        width: 50px; /* Adjust size as needed */
-        height: 50px; /* Adjust size as needed */
-        margin-right: 20px; /* Space between the satellite dish and title */
-        align-self: flex-start; /* Aligns the image with the title */
+        margin-bottom: 20px; /* Space between the logo and button band */
     }
 
     /* Bottom band styling */
