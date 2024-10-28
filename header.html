@@ -5,6 +5,7 @@
         <img src="Images/Balloon_2.jpg" alt="COTB Logo" class="logo">
     </div>
     <div class="button-band">
+        <img src="Images/electronic-device-with-an-antenna-svgrepo-com.svg" alt="Electronic Device" class="device-icon">
         <a href="index.html" class="button-placeholder">Home</a> <!-- Updated link to index.html -->
         <a href="Science.html" class="button-placeholder">Telemetry</a>
         <a href="Supplies.html" class="button-placeholder">Support</a>
@@ -57,12 +58,20 @@
         margin-bottom: 20px; /* Add space between the logo and button band */
     }
 
+    /* Icon styling */
+    .device-icon {
+        width: 50px; /* Set the width of the icon */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space between icon and buttons */
+    }
+
     /* Bottom band styling */
     .button-band {
         width: 100%;
         height: 40px;
         background-color: #333; /* Adjust to match footer color */
         display: flex;
+        flex-direction: column; /* Stack the icon and buttons vertically */
         justify-content: center;
         align-items: center;
     }
@@ -74,7 +83,7 @@
         width: 80px;
         height: 25px;
         border-radius: 8px;
-        margin: 0 10px;
+        margin: 5px 0; /* Adjust spacing between buttons */
         display: flex;
         justify-content: center;
         align-items: center;
