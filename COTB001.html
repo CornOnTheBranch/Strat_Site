@@ -30,10 +30,11 @@
         <!-- MAIN CONTENT -->
         <main class="main">
 
+            <!-- Individual Feature Box with Image -->
             <div class="feature-box">
                 <img src="Images/COTB01_Peak.jpg" alt="COTB Peak Image" style="width: 100%; height: auto;">
             </div>
-            
+
             <!-- Feature Boxes for Media -->
             <div class="feature-box">
                 <video width="100%" controls>
@@ -49,16 +50,32 @@
                 </video>
             </div>
 
-            <div class="feature-box">
-                <img src="Images/COTB01_Flight%20Path2.png" alt="COTB01 Path" style="width: 100%; height: auto;">
-            </div>
+            <!-- Collage Container for Images -->
+            <div class="collage-container">
+                <div class="feature-box">
+                    <img src="Images/COTB01_Flight%20Path2.png" alt="COTB01 Path" style="width: 100%; height: auto;">
+                </div>
 
-            <div class="feature-box">
-                <img src="Images/COTB01_Graph.png" alt="COTB01 Data style="width: 100%; height: auto;">
+                <div class="feature-box">
+                    <img src="Images/COTB1_TX_Done.jpg" alt="COTB01 Path" style="width: 100%; height: auto;">
+                </div>
+
+                <div class="feature-box">
+                    <img src="Images/COTB_Dual_RX.jpg" alt="COTB01 RX Refined" style="width: 100%; height: auto;">
+                </div>
+
+                <div class="feature-box">
+                    <img src="Images/COTB_RX_Proto.jpg" alt="COTB01 RX Proto" style="width: 100%; height: auto;">
+                </div>
+
+                <div class="feature-box">
+                    <img src="Images/COTB01_Graph.png" alt="COTB01 Data" style="width: 100%; height: auto;">
+                </div>
             </div>
 
             <!-- FOOTER -->
-        <footer id="footer" class="footer-container"></footer>
+            <footer id="footer" class="footer-container"></footer>
+        </main>
     </div>
 
     <!-- Inline styling for layout -->
@@ -81,11 +98,8 @@
         }
 
         .feature-box {
-            max-width: 600px;
-            width: 100%;
             background-color: #f0f0f0;
             border: 1px solid #ccc;
-            margin: 20px auto;
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -101,6 +115,15 @@
             height: auto;
         }
 
+        /* Collage container styling */
+        .collage-container {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
         /* Responsive styling */
         @media (max-width: 600px) {
             .feature-box {
@@ -110,4 +133,3 @@
     </style>
 </body>
 </html>
-
