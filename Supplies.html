@@ -21,7 +21,6 @@
         }
     </script>
 
-    <!-- Inline styling for layout -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -69,9 +68,9 @@
         /* Image gallery styling */
         .image-gallery {
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
-            gap: 10px; /* Reduced gap between images */
+            gap: 20px; /* Default gap */
             margin-top: 20px;
         }
 
@@ -83,12 +82,30 @@
             height: auto;
         }
 
-        /* Hover effect only for non-mobile devices */
-        @media (hover: hover) and (pointer: fine) {
-            .image-gallery img:hover {
-                transform: scale(1.2);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        /* Adjustments for browser */
+        @media (min-width: 768px) {
+            .image-gallery {
+                gap: 30px; /* 50% increase from default */
+                margin-bottom: 50px; /* 50px gap below images */
             }
+        }
+
+        /* Adjustments for mobile */
+        @media (max-width: 767px) {
+            .image-gallery img {
+                width: 160px; /* 20% reduction in size */
+            }
+
+            .image-gallery {
+                gap: 30px; /* 50% increase from default */
+            }
+        }
+
+        /* Center the button below the images */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -100,16 +117,17 @@
 
         <!-- MAIN CONTENT -->
         <main class="main">
-            <div style="display: flex; justify-content: center;">
-                <a href="https://forum.arduino.cc/t/crc-16-ccitt-checksum-of-telemetry-string-via-tochararray/530472" target="_blank">
-                    <button class="link-button">Open CRC-16 CCITT Forum</button>
-                </a>
-            </div>
-
             <!-- Image Gallery -->
             <div class="image-gallery">
                 <img src="Images/Top.png" alt="Top View">
                 <img src="Images/Bottom.png" alt="Bottom View">
+            </div>
+
+            <!-- Button Below Images -->
+            <div class="button-container">
+                <a href="https://forum.arduino.cc/t/crc-16-ccitt-checksum-of-telemetry-string-via-tochararray/530472" target="_blank">
+                    <button class="link-button">Open CRC-16 CCITT Forum</button>
+                </a>
             </div>
         </main>
 
