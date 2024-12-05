@@ -69,9 +69,9 @@
         /* Image gallery styling */
         .image-gallery {
             display: flex;
-            justify-content: space-around;
+            justify-content: flex-start;
             align-items: center;
-            gap: 20px;
+            gap: 10px; /* Reduced gap between images */
             margin-top: 20px;
         }
 
@@ -83,9 +83,12 @@
             height: auto;
         }
 
-        .image-gallery img:hover {
-            transform: scale(1.2);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        /* Hover effect only for non-mobile devices */
+        @media (hover: hover) and (pointer: fine) {
+            .image-gallery img:hover {
+                transform: scale(1.2);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            }
         }
     </style>
 </head>
@@ -107,7 +110,6 @@
             <div class="image-gallery">
                 <img src="Images/Top.png" alt="Top View">
                 <img src="Images/Bottom.png" alt="Bottom View">
-                <img src="Images/Isometric.png" alt="Isometric View">
             </div>
         </main>
 
