@@ -72,28 +72,30 @@
             align-items: center;
             gap: 20px; /* Default gap */
             margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         .image-gallery img {
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
-            width: 200px;
-            height: auto;
+            width: 250px; /* Consistent width */
+            height: 250px; /* Consistent height */
         }
 
         /* Adjustments for browser */
         @media (min-width: 768px) {
             .image-gallery {
                 gap: 30px; /* 50% increase from default */
-                margin-bottom: 50px; /* 50px gap below images */
+                margin-bottom: 70px; /* 50px additional gap below images */
             }
         }
 
         /* Adjustments for mobile */
         @media (max-width: 767px) {
             .image-gallery img {
-                width: 160px; /* 20% reduction in size */
+                width: 200px; /* 20% reduction in size */
+                height: 200px; /* Maintain aspect ratio */
             }
 
             .image-gallery {
@@ -106,6 +108,22 @@
             display: flex;
             justify-content: center;
             margin-top: 20px;
+            margin-bottom: 30px; /* Added space below button */
+        }
+
+        /* Description styling */
+        .description {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-top: 20px;
+            padding: 0 10px;
+        }
+
+        .description h2 {
+            text-align: center;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -129,6 +147,21 @@
                     <button class="link-button">Open CRC-16 CCITT Forum</button>
                 </a>
             </div>
+
+            <!-- Description -->
+            <section class="description">
+                <h2>Product Overview: COTB TX V2</h2>
+                <p>
+                    COTB TX V2 is a proven High Altitude Balloon (HAB) stratospheric payload, with several successful flights and retrievals. 
+                    Capable of reaching over 100,000 ft altitude while measuring internal and external temperature, atmospheric pressure, 
+                    humidity, battery voltage, and altitude. The onboard GPS receiver and LoRa radio combine to provide tracker functionality 
+                    with a theoretical range of hundreds of kilometers, supplemented by a backup Real Time Clock.
+                </p>
+                <p>
+                    Developed from a simple box of wires to a sophisticated four-layer PCB, COTB TX V2 is the culmination of years of research, 
+                    testing, and iterative development. This robust payload is designed to push the boundaries of high-altitude exploration.
+                </p>
+            </section>
         </main>
 
         <!-- FOOTER -->
