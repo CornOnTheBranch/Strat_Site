@@ -65,6 +65,10 @@
             background-color: #0056b3;
         }
 
+        .greyscale {
+        filter: grayscale(50%);
+        }
+
         /* Image gallery styling */
         .image-gallery {
             display: flex;
@@ -147,16 +151,18 @@
     </div>
 
     <!-- Description for COTB TX V2 -->
-    <p>
-        COTB TX V2 is a proven High Altitude Balloon (HAB) stratospheric payload, with several successful flights and retrievals. 
-        Capable of reaching over 100,000 ft altitude while measuring internal and external temperature, atmospheric pressure, 
-        humidity, battery voltage, and altitude. The onboard GPS receiver and LoRa radio combine to provide tracker functionality 
-        with a theoretical range of hundreds of kilometers, supplemented by a backup Real Time Clock.
-    </p>
-    <p>
-        Developed from a simple box of wires to a sophisticated four-layer PCB, COTB TX V2 is the culmination of years of research, 
-        testing, and iterative development. This robust payload is designed to push the boundaries of high-altitude exploration.
-    </p>
+    <div class="text-limited-width">
+        <p>
+            COTB TX V2 is a proven High Altitude Balloon (HAB) stratospheric payload, with several successful flights and retrievals. 
+            Capable of reaching over 100,000 ft altitude while measuring internal and external temperature, atmospheric pressure, 
+            humidity, battery voltage, and altitude. The onboard GPS receiver and LoRa radio combine to provide tracker functionality 
+            with a theoretical range of hundreds of kilometers, supplemented by a backup Real Time Clock.
+        </p>
+        <p>
+            Developed from a simple box of wires to a sophisticated four-layer PCB, COTB TX V2 is the culmination of years of research, 
+            testing, and iterative development. This robust payload is designed to push the boundaries of high-altitude exploration.
+        </p>
+    </div>
 
     <!-- Title Above the GUI Image -->
     <h2 style="margin-top: 40px; text-align: center;">COTB RX V1</h2>
@@ -167,23 +173,26 @@
     </div>
 
     <!-- Description for COTB RX V1 -->
-    <p style="margin-top: 20px;">
-        COTB RX V1 is a versatile receiver capable of tracking two HAB payloads' telemetry simultaneously and a media channel 
-        that receives a 640x480 image every few minutes from the COTB TX V2 payload. An onboard servo motor adjusts its perspective, 
-        allowing it to capture images pointed toward Earth, at the horizon, and up at the balloon. 
-    </p>
-    <p>
-        The COTB RX V1 software is written in Python and can be utilized on a Raspberry Pi with a custom HAT, which is currently under development. 
-        This makes the RX V1 a powerful tool for capturing and analyzing data during high-altitude balloon missions.
-    </p>
+    <div class="text-limited-width">
+        <p style="margin-top: 20px;">
+            COTB RX V1 is a versatile receiver capable of tracking two HAB payloads' telemetry simultaneously and a media channel 
+            that receives a 640x480 image every few minutes from the COTB TX V2 payload. An onboard servo motor adjusts its perspective, 
+            allowing it to capture images pointed toward Earth, at the horizon, and up at the balloon. 
+        </p>
+        <p>
+            The COTB RX V1 software is written in Python and can be utilized on a Raspberry Pi with a custom HAT, which is currently under development. 
+            This makes the RX V1 a powerful tool for capturing and analyzing data during high-altitude balloon missions.
+        </p>
+    </div>
 
-         <!-- Additional Images for COTB RX V1 -->
+    <!-- Additional Images for COTB RX V1 -->
+   <!-- Additional Images for COTB RX V1 -->
     <div class="image-gallery" style="margin-top: 30px;">
         <img src="Images/COTB_RX_Top.png" alt="COTB RX Top View" style="width: 200px; height: 200px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
         <img src="Images/COTB_RX_Bottom.png" alt="COTB RX Bottom View" style="width: 200px; height: 200px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
     </div>
-     
 </section>
+
 
                         <!-- Button Below Images -->
             <div class="button-container">
