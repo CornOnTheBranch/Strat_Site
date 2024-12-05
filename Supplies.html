@@ -20,25 +20,6 @@
                 .catch(error => console.error('Error loading HTML:', error));
         }
     </script>
-</head>
-
-<body onload="loadHTML('header', 'header.html'); loadHTML('footer', 'footer.html');">
-    <div class="container">
-        <!-- HEADER -->
-        <header id="header"></header>
-
-        <!-- MAIN CONTENT -->
-        <main class="main">
-  <div style="display: flex; justify-content: center;">
-    <a href="https://forum.arduino.cc/t/crc-16-ccitt-checksum-of-telemetry-string-via-tochararray/530472" target="_blank">
-        <button class="link-button">Open CRC-16 CCITT Forum</button>
-    </a>
-</div>
-        </main>
-
-        <!-- FOOTER -->
-        <footer id="footer" class="footer-container"></footer>
-    </div>
 
     <!-- Inline styling for layout -->
     <style>
@@ -49,10 +30,16 @@
             padding: 0;
         }
 
+        .container {
+            max-width: 1080px;
+            margin: auto;
+            padding: 20px;
+        }
+
         .footer-container {
-            max-width: 1080px; /* Restrict footer width to 1080px */
-            width: 100%; /* Allow full width within container */
-            margin: 0 auto; /* Center align the footer */
+            max-width: 1080px;
+            width: 100%;
+            margin: 0 auto;
             text-align: center;
             padding: 20px 10px;
             background-color: #333;
@@ -61,7 +48,7 @@
 
         /* Button styling */
         .link-button {
-            background-color: #007BFF; /* Bootstrap primary color */
+            background-color: #007BFF;
             color: white;
             border: none;
             border-radius: 5px;
@@ -76,8 +63,56 @@
         }
 
         .link-button:hover {
-            background-color: #0056b3; /* Darker shade on hover */
+            background-color: #0056b3;
+        }
+
+        /* Image gallery styling */
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-gallery img {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 200px;
+            height: auto;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
     </style>
+</head>
+
+<body onload="loadHTML('header', 'header.html'); loadHTML('footer', 'footer.html');">
+    <div class="container">
+        <!-- HEADER -->
+        <header id="header"></header>
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+            <div style="display: flex; justify-content: center;">
+                <a href="https://forum.arduino.cc/t/crc-16-ccitt-checksum-of-telemetry-string-via-tochararray/530472" target="_blank">
+                    <button class="link-button">Open CRC-16 CCITT Forum</button>
+                </a>
+            </div>
+
+            <!-- Image Gallery -->
+            <div class="image-gallery">
+                <img src="Images/Top.png" alt="Top View">
+                <img src="Images/Bottom.png" alt="Bottom View">
+                <img src="Images/Isometric.png" alt="Isometric View">
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer id="footer" class="footer-container"></footer>
+    </div>
 </body>
 </html>
