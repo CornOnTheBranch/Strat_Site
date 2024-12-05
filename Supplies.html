@@ -66,7 +66,7 @@
         }
 
         .greyscale {
-        filter: grayscale(50%);
+            filter: grayscale(80%);
         }
 
         /* Image gallery styling */
@@ -129,6 +129,14 @@
             text-align: center;
             margin-bottom: 15px;
         }
+
+        /* New class to limit text width */
+        .text-limited-width {
+            max-width: 800px; /* Adjust this value as needed */
+            margin: 0 auto; /* Centers the text block */
+            padding: 0 20px; /* Adds padding for spacing */
+            line-height: 1.6; /* Improves readability */
+        }
     </style>
 </head>
 
@@ -140,67 +148,64 @@
         <!-- MAIN CONTENT -->
         <main class="main">
             <!-- Image Gallery -->
- <section class="description">
-    <!-- Title Above the Top and Bottom Images -->
-    <h2>COTB TX V2</h2>
+            <section class="description">
+                <!-- Title Above the Top and Bottom Images -->
+                <h2>COTB TX V2</h2>
 
-    <!-- Image Gallery -->
-    <div class="image-gallery">
-        <img src="Images/Top.png" alt="Top View">
-        <img src="Images/Bottom.png" alt="Bottom View">
-    </div>
+                <!-- Image Gallery -->
+                <div class="image-gallery">
+                    <img src="Images/Top.png" alt="Top View">
+                    <img src="Images/Bottom.png" alt="Bottom View">
+                </div>
 
-    <!-- Description for COTB TX V2 -->
-    <div class="text-limited-width">
-        <p>
-            COTB TX V2 is a proven High Altitude Balloon (HAB) stratospheric payload, with several successful flights and retrievals. 
-            Capable of reaching over 100,000 ft altitude while measuring internal and external temperature, atmospheric pressure, 
-            humidity, battery voltage, and altitude. The onboard GPS receiver and LoRa radio combine to provide tracker functionality 
-            with a theoretical range of hundreds of kilometers, supplemented by a backup Real Time Clock.
-        </p>
-        <p>
-            Developed from a simple box of wires to a sophisticated four-layer PCB, COTB TX V2 is the culmination of years of research, 
-            testing, and iterative development. This robust payload is designed to push the boundaries of high-altitude exploration.
-        </p>
-    </div>
+                <!-- Description for COTB TX V2 -->
+                <div class="text-limited-width">
+                    <p>
+                        COTB TX V2 is a proven High Altitude Balloon (HAB) stratospheric payload, with several successful flights and retrievals. 
+                        Capable of reaching over 100,000 ft altitude while measuring internal and external temperature, atmospheric pressure, 
+                        humidity, battery voltage, and altitude. The onboard GPS receiver and LoRa radio combine to provide tracker functionality 
+                        with a theoretical range of hundreds of kilometers, supplemented by a backup Real Time Clock.
+                    </p>
+                    <p>
+                        Developed from a simple box of wires to a sophisticated four-layer PCB, COTB TX V2 is the culmination of years of research, 
+                        testing, and iterative development. This robust payload is designed to push the boundaries of high-altitude exploration.
+                    </p>
+                </div>
 
-    <!-- Title Above the GUI Image -->
-    <h2 style="margin-top: 40px; text-align: center;">COTB RX V1</h2>
+                <!-- Title Above the GUI Image -->
+                <h2 style="margin-top: 40px; text-align: center;">COTB RX V1</h2>
 
-    <!-- GUI Image -->
-    <div style="text-align: center; margin-top: 20px;">
-        <img src="Images/COTB_GUI.png" alt="COTB GUI Screenshot" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-    </div>
+                <!-- GUI Image -->
+                <div style="text-align: center; margin-top: 20px;">
+                    <img src="Images/COTB_GUI.png" alt="COTB GUI Screenshot" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                </div>
 
-    <!-- Description for COTB RX V1 -->
-    <div class="text-limited-width">
-        <p style="margin-top: 20px;">
-            COTB RX V1 is a versatile receiver capable of tracking two HAB payloads' telemetry simultaneously and a media channel 
-            that receives a 640x480 image every few minutes from the COTB TX V2 payload. An onboard servo motor adjusts its perspective, 
-            allowing it to capture images pointed toward Earth, at the horizon, and up at the balloon. 
-        </p>
-        <p>
-            The COTB RX V1 software is written in Python and can be utilized on a Raspberry Pi with a custom HAT, which is currently under development. 
-            This makes the RX V1 a powerful tool for capturing and analyzing data during high-altitude balloon missions.
-        </p>
-    </div>
+                <!-- Description for COTB RX V1 -->
+                <div class="text-limited-width">
+                    <p style="margin-top: 20px;">
+                        COTB RX V1 is a versatile receiver capable of tracking two HAB payloads' telemetry simultaneously and a media channel 
+                        that receives a 640x480 image every few minutes from the COTB TX V2 payload. An onboard servo motor adjusts its perspective, 
+                        allowing it to capture images pointed toward Earth, at the horizon, and up at the balloon. 
+                    </p>
+                    <p>
+                        The COTB RX V1 software is written in Python and can be utilized on a Raspberry Pi with a custom HAT, which is currently under development. 
+                        This makes the RX V1 a powerful tool for capturing and analyzing data during high-altitude balloon missions.
+                    </p>
+                </div>
 
-    <!-- Additional Images for COTB RX V1 -->
-  <div class="image-gallery" style="margin-top: 30px;">
-    <img src="Images/COTB_RX_Top.png" alt="COTB RX Top View" class="greyscale" style="width: 200px; height: 200px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-    <img src="Images/COTB_RX_Bottom.png" alt="COTB RX Bottom View" class="greyscale" style="width: 200px; height: 200px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-</div>
+                <!-- Additional Images for COTB RX V1 -->
+                <div class="image-gallery" style="margin-top: 30px;">
+                    <img src="Images/COTB_RX_Top.png" alt="COTB RX Top View" class="greyscale" style="width: 200px; height: 200px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                    <img src="Images/COTB_RX_Bottom.png" alt="COTB RX Bottom View" class="greyscale" style="width: 200px; height: 200px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                </div>
+            </section>
 
-</section>
-
-
-                        <!-- Button Below Images -->
+            <!-- Button Below Images -->
             <div class="button-container">
                 <a href="https://forum.arduino.cc/t/crc-16-ccitt-checksum-of-telemetry-string-via-tochararray/530472" target="_blank">
                     <button class="link-button">Open CRC-16 CCITT Forum</button>
                 </a>
             </div>
-            
         </main>
 
         <!-- FOOTER -->
